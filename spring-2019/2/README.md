@@ -1,7 +1,7 @@
 ## IndyCar Anomaly Event Detection
 
 #### Members
-Jianyu Li, Indiana University, jl145@iu.edu
+Jiayu Li, Indiana University, jl145@iu.edu
 Xinquan Wu, Indiana University, xinqwu@iu.edu
 
 #### Summary
