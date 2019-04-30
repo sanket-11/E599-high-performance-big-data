@@ -15,3 +15,12 @@ DriverService.java -Contains the functions for DriverService module
 RaceService.java - Contains the functions for RaceService Module
 
 TrackService.java - Contains the functions for TrackService Module
+
+
+To run the application. 
+1.Load the data into MongoDB database 
+2.add the database name in the IndycarDBClient file as mentioned in the file
+3.Uncomment the query you would like to run in the mongoclienttest file 
+4.execute the program to get the results.
+
+Note- All returned values from the functions are gonna have a data type of ArrayList.
