@@ -15,7 +15,7 @@ public class IndycarDBClient {
      */
     public IndycarDBClient(String url) {
         MongoClient mongoClient =new MongoClient( url);
-        this.database = mongoClient.getDatabase("Sahaj");
+        this.database = mongoClient.getDatabase("Sahaj");  //add database name instead of Sahaj
     }
 
     /**
