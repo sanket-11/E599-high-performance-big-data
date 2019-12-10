@@ -5,12 +5,8 @@
 
 # Running scripts..
 
-## 1. clone the repo
+## 1. Installation
 
-``` 
-git clone https://github.com/kentaroy47/frcnn-from-scratch-with-keras.git
-cd frcnn-from-scratch-with-keras
-```
 Install requirements. make sure that you have Keras installed.
 ```
 pip install -r requirements.txt
@@ -47,7 +43,7 @@ python test_frcnn.py --path ~/VOC/test/VOCdevkit/VOC2007/JPEGImages/ --write
 ```
 python measure_map.py --path ~/VOC/test/VOCdevkit/
 ```
-
+code courtesy: https://github.com/kentaroy47
 
 
 
