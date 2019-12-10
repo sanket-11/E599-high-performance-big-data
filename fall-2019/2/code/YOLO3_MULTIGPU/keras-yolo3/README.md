@@ -86,3 +86,4 @@ It carries out detection on the image and write the image with detected bounding
 `python evaluate.py -c config.json`
 
 Compute the mAP performance of the model defined in `saved_weights_name` on the validation dataset defined in `valid_image_folder` and `valid_annot_folder`.
+code courtesy: https://github.com/experiencor
