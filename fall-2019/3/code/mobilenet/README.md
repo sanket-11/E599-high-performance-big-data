@@ -9,9 +9,7 @@ Instead of tensorflow/models/research, use the folder models/research in this di
 4. Run the script  	"create_tfrecord_no_test.sh" . This will create the train and validation sets
 
 ``
-
-./create_tfrecord_no_test.sh
-
+./create_tfrecord_no_test.sh                       
 
 ``
 
