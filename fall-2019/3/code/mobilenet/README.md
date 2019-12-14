@@ -79,9 +79,60 @@ Make sure to set up these variables correctly in time_benchmark.py:
  * cap 
 
 ### 7.3. Real-time object detection using red5 and flask 
-1 Run these commands in your home directory:
+1. Run these commands in your home directory:
 ``` bash
 sudo apt-get install openjdk-8-jdk
 sudo apt-get install maven
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ```
+Run ``sudo vim ~/.bashrc`` and paste the line below inside the file:
+```bash
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+
+```
+Then run this to update the system variables:
+``` bash
+source ~/.bashrc
+
+```
+Check the JAVA_HOME:
+```bash 
+echo $JAVA_HOME
+/usr/lib/jvm/java-8-openjdk-amd64
+```
+
+
+Install red5 server
+```bash
+wget https://github.com/Red5/red5-server/releases/download/v1.0.9-RELEASE/red5-
+server-1.0.9-RELEASE.tar.gz
+tar xzvf red5-server-1.0.9-RELEASE.tar.gz
+cd red5-server
+# start the server. & starts it in the background
+./red5.sh &
+```
+To shut dow the server ``./red5-shutdown.sh``
+
+Port forwarding  (this step is only necessary if you are working on a virtual server
+```bash
+ssh -L 61521:localhost:61521 -L 5080:localhost:5080 vm2.india.futuregrid.org
+```
+Now go to page: ``localhost:5080`` on your browser and you will see the red5 page
+
+To download the rtmp simulator : [use this link] (https://github.com/DSC-SPIDAL/IndyCar/tree/master/utils/rtmp-simulator)
+Go to the rtmp-simulator directory and run :
+```bash
+mvn packag
+
+```
+then, 
+```bash 
+java -cp target/rtmp-simulator-1.0-SNAPSHOT-jar-with-dependencies.jar
+edu.iu.dsc.indycar.rtmp.RTMPStreamer PATH_TO_VIDEO_FILE
+```
+Go to the mobilenetv1 (or mobilenetv2) folder and run
+```bash
+python rtmp_client.py
+
+```
+Then, Go to your browser  and run ``localhost:61521`` (or the port that you assigned) 
