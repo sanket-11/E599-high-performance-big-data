@@ -56,12 +56,32 @@ Training will take long. Think of doing it within a tmux session
 ```
 ## 7. Inference
 ### 7.1. On images
-
-```python 
-python time_benchmark.py                  
-```
-Make sure to set up these variables correctly: 
+Make sure to set up these variables correctly in time_benchmark.py: 
  * MODEL_NAME
  * PATH_TO_FROZEN_GRAPH
  * PATH_TO_LABELS
  * image_paths
+If you want the script to save the images after thedetection with the boxes, uncomment line 128 in the script. 
+This script will run inference on timages and indicate the total and average time for each part of the process
+```python 
+# scipy.misc.imsave('img'+str(image_count)+'.jpg', frame)               
+```
+Run The script
+```python 
+python time_benchmark.py                  
+```
+### 7.2. On video
+Using the script benchmark_video.py, it is possible to recreate the same results as the time_benchmark script but instead of the input being images, it can be a video that frames will be extracted from.
+Make sure to set up these variables correctly in time_benchmark.py: 
+ * MODEL_NAME
+ * PATH_TO_FROZEN_GRAPH
+ * PATH_TO_LABELS
+ * cap 
+
+### 7.3. Real-time object detection using red5 and flask 
+1 Run these commands in your home directory:
+``` bash
+sudo apt-get install openjdk-8-jdk
+sudo apt-get install maven
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+```
