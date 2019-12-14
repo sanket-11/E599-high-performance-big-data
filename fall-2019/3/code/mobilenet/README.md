@@ -10,7 +10,6 @@ Instead of tensorflow/models/research, use the folder models/research in this di
 
 ``
 ./create_tfrecord_no_test.sh                       
-
 ``
 
 
