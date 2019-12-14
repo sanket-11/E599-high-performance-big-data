@@ -21,8 +21,7 @@ In this case we chose "ssd_mobilenet_v1_quantized_coco" and "ssd_mobilenet_v2_qu
 4. Copy the file "pipeline.config" to the parent directory (mobilnetv1 or mobilenetv2)
 5. Change the pipeline.config file
 
-``
-train_input_reader {
+``train_input_reader {
   label_map_path: "path to pascal_label_map.pbtxt"
   tf_record_input_reader {
     input_path: "path totrain.tfrecord"
@@ -39,7 +38,5 @@ eval_input_reader {
   num_readers: 1
   tf_record_input_reader {
     input_path: "path to val.tfrecord"
-  }
-  
-  ``
+  }``
   
