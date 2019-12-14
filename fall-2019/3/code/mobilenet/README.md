@@ -61,7 +61,7 @@ Training will take long. Think of doing it within a tmux session
 python time_benchmark.py                  
 ```
 Make sure to set up these variables correctly: 
- *MODEL_NAME
- *PATH_TO_FROZEN_GRAPH
- *PATH_TO_LABELS
- *image_paths
+ * MODEL_NAME
+ * PATH_TO_FROZEN_GRAPH
+ * PATH_TO_LABELS
+ * image_paths
