@@ -15,22 +15,25 @@ The data needs to have the following structure :
 ```bash
 VOC           # path:  /N/u/<username>/TensorFlow-yolov3-tiny/VOC/
 
-|------ test
-|    
-#""
-VOCdevkit
-|       
-#""
-VOC2007
-|       
-#""
-Annotations # annotation files in VOC format
-|       
-#""
-JPEGImages # jpeg files
-|       
-#""
-ImageSets                   
+── VOC
+│   ├── test
+│   │   └── VOCdevkit
+│   │       └── VOC2007
+│   │           ├── Annotations
+│   │           ├── ImageSets
+│   │           │   └── Main
+│   │           │       ├── test
+│   │           │       └── test.txt
+│   │           └── JPEGImages
+│   └── train
+│       └── VOCdevkit
+│           └── VOC2007
+│               ├── Annotations
+│               ├── ImageSets
+│               │   └── Main
+│               │       ├── train.txt
+│               │       └── trainval.txt
+│               └── JPEGImages
 ```
 
 
