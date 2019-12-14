@@ -1,1 +1,2 @@
-Put the instructions here to run your code. If dependencies are needed, give instructions on how to install them.
+1. To run SSD-Mobilenet models (SSD-Mobilenetv1 and SSD-Mobilenetv2) please refer to the readme file in the folder mobilenet
+2. To run Tiny-yoloV3 model  please refer to the readme file in the folder TensorFlow-yolov3-tiny
