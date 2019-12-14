@@ -3,8 +3,9 @@
 To use the Tensorflow object detection API, follow the instructions in [this link](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md)
 Instead of tensorflow/models/research, use the folder models/research in this directory
 ## 3. Prepare the data 
-1. Go to the data_prepare folder 
-2. Put your images in the "images" folder and annotations  in the annotations folder ( the images and annotations need to have the same names) and the abnnotations should bge in the VOC format
+1. Go to the data_prepare folder and create 3 folders: images, annotations and test_images
+
+2. Put your  training images in the "images" folder and training annotations  in the "annotations" folder ( the images and annotations need to have the same names) and the annotations should bge in the VOC format. The "test_images" folder should contain the test images
 3. add two empty folders "train_dataset" and "val_dataset"
 4. Run the script  	"create_tfrecord_no_test.sh" . This will create the train and validation sets
 
@@ -41,9 +42,26 @@ eval_input_reader {
     input_path: "path to val.tfrecord"
   }
   ```
- ## 4. Training 
+ ## 5. Training 
  1. Run the script "run_training.sh
  ```python 
 ./run_training.sh                       
 ```
 Training will take long. Think of doing it within a tmux session
+
+## 6. Export model
+ 1. Once the training is done, run the script "run_training.sh
+ ```python 
+./export_model.sh                      
+```
+## 7. Inference
+### 7.1. On images
+
+```python 
+python time_benchmark.py                  
+```
+Make sure to set up these variables correctly: 
+ *MODEL_NAME
+ *PATH_TO_FROZEN_GRAPH
+ *PATH_TO_LABELS
+ *image_paths
