@@ -19,88 +19,88 @@ VOC           # path:  /N/u/<username>/TensorFlow-yolov3-tiny/VOC/
 │   ├── test
 │   │   └── VOCdevkit
 │   │       └── VOC2007
-│   │           ├── Annotations
-│   │           ├── ImageSets
+│   │           ├── Annotations # annotation files in VOC format
+│   │           ├── ImageSets 
 │   │           │   └── Main
-│   │           │       ├── test
-│   │           │       └── test.txt
-│   │           └── JPEGImages
+│   │           │       └── test.txt  # each line contains image names; for example: 102nd_1750 (without extension
+│   │           └── JPEGImages # jpeg files
 │   └── train
 │       └── VOCdevkit
 │           └── VOC2007
-│               ├── Annotations
+│               ├── Annotations # annotation files in VOC format
 │               ├── ImageSets
 │               │   └── Main
 │               │       ├── train.txt
-│               │       └── trainval.txt
-│               └── JPEGImages
+│               │       └── trainval.txt # each line contains image names; for example: 102nd_1750 (without extension)
+│               └── JPEGImages # jpeg files
 ```
-
-
-## 4. Get the model
-1. Get the model you want train from [Tensorflow Model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
-In this case we chose "ssd_mobilenet_v1_quantized_coco" and "ssd_mobilenet_v2_quantized_coco"
-2. Create a folder named "CP" inside mobilenetv1 and mobilenetv2 and download each model the appropriate CP folder
-3. Extract the files in CP folder for each model (if you extracted them elsewhere move them to CP folder)
-4. Copy the file "pipeline.config" to the parent directory (mobilnetv1 or mobilenetv2)
-5. Change the pipeline.config file accordingly by specifying the right paths
-
+Update num2 like below in ``scripts/voc_annotation.py``
 ```python 
-  train_input_reader {
-  label_map_path: "path to pascal_label_map.pbtxt"
-  tf_record_input_reader {
-    input_path: "path totrain.tfrecord"
-  }
-}
-eval_config {
-  num_examples: 8000
-  metrics_set: "coco_detection_metrics"
-  use_moving_averages: false
-}
-eval_input_reader {
-  label_map_path: "path to pascal_label_map.pbtxt"
-  shuffle: false
-  num_readers: 1
-  tf_record_input_reader {
-    input_path: "path to val.tfrecord"
-  }
+num1 = convert_voc_annotation(os.path.join(flags.data_path,
+'train/VOCdevkit/VOC2007'), 'trainval', flags.train_annotation, False)
+num2 = 0 #convert_voc_annotation(os.path.join(flags.data_path,
+'train/VOCdevkit/VOC2012'), 'trainval', flags.train_annotation, False)
+num3 = convert_voc_annotation(os.path.join(flags.data_path,
+'test/VOCdevkit/VOC2007'), 'test', flags.test_annotation, False)
+print('=> The number of image for train is: %d\tThe number of image for test
+is:%d' %(num1 + num2, num3))
+```
+Then run the script below:
+```bash
+python scripts/voc_annotation.py --data_path ~/tensorflow-yolov3/VOC
+```
+ 
+## 4. Configurations: 
+Edit ``core/config.py`` and ``core/config_tiny.py`` and change the lines like below:
+
+```bash
+  __C.YOLO.CLASSES = "./data/classes/voc.names"
+__C.TRAIN.ANNOT_PATH = "./data/dataset/voc_train.txt"
+__C.TEST.ANNOT_PATH = "./data/dataset/voc_test.txt"
   ```
  ## 5. Training 
  1. Run the script "run_training.sh
  ```python 
-./run_training.sh                       
+python train_tiny.py                      
 ```
 Training will take long. Think of doing it within a tmux session
 
 ## 6. Export model
  1. Once the training is done, run the script "run_training.sh
  ```python 
-./export_model.sh                      
+python freeze_graph.py                  
 ```
 ## 7. Inference
-### 7.1. On images
-Make sure to set up these variables correctly in time_benchmark.py: 
- * MODEL_NAME
- * PATH_TO_FROZEN_GRAPH
- * PATH_TO_LABELS
- * image_paths
-If you want the script to save the images after thedetection with the boxes, uncomment line 128 in the script. 
-This script will run inference on timages and indicate the total and average time for each part of the process
-```python 
-# scipy.misc.imsave('img'+str(image_count)+'.jpg', frame)               
+ update ``core/config.py``and  ``core/config_tiny.py``
+```bash
+__C.TEST.WEIGHT_FILE = "./checkpoint/yolov3_test_loss=9.0973.ckpt-26" choose the chackpoint with the smallest loss
 ```
-Run The script
+### 7.1. On images
+run the followings:
+```bash 
+python evaluate_tiny1.py
+cd mAP
+python main.py -na
+```
+if you see an error update this line
 ```python 
-python time_benchmark.py                  
+bbox_data_gt = np.array([list(map(int,map(float, box.split(',')))) for box in
+annotation[1:]])
+```
+
+The resulting images will be found in ``data/detection``
+If you want to run the time benchmark like we did for the mobilenet networks: 
+```bash 
+python evaluate_tiny.py
+
 ```
 ### 7.2. On video
-Using the script benchmark_video.py, it is possible to recreate the same results as the time_benchmark script but instead of the input being images, it can be a video that frames will be extracted from.
-Make sure to set up these variables correctly in time_benchmark.py: 
- * MODEL_NAME
- * PATH_TO_FROZEN_GRAPH
- * PATH_TO_LABELS
- * cap 
+Using the script ``video_demo.py``, it is possible to recreate the same results as the time_benchmark script but instead of the input being images, it can be a video that frames will be extracted from.
+```bash 
+python video_demo.py
 
+```
+Make sure to update the video file location 
 ### 7.3. Real-time object detection using red5 and flask 
 1. Run these commands in your home directory:
 ``` bash
@@ -153,9 +153,9 @@ then,
 java -cp target/rtmp-simulator-1.0-SNAPSHOT-jar-with-dependencies.jar
 edu.iu.dsc.indycar.rtmp.RTMPStreamer PATH_TO_VIDEO_FILE
 ```
-Go to the mobilenetv1 (or mobilenetv2) folder and run
+Go to the flask  folder and run: 
 ```bash
-python rtmp_client.py
+python run_flask_server.py
 
 ```
 Then, Go to your browser  and run ``localhost:61521`` (or the port that you assigned) 
