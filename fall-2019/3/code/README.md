@@ -14,8 +14,8 @@ The data needs to have the following structure :
 
 ```bash
 VOC           # path:  /N/u/<username>/TensorFlow-yolov3-tiny/VOC/
-!""
- test
+
+|------ test
 |    
 #""
 VOCdevkit
