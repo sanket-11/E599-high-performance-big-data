@@ -15,6 +15,6 @@ For the results, we found that the Tiny-yolov3 model outperforms the other two m
 
 The Table below shows the mAP results for the 3 models: 
 
-| ------------- | SSD-Mobilenetv1  | SSD-Mobilenetv2 | Tiny-yolov3|
+| | SSD-Mobilenetv1  | SSD-Mobilenetv2 | Tiny-yolov3|
 | ------------- | ------------- |------------- |------------- |
 | mAP | 72.44% | 64.27%|78.04% |
