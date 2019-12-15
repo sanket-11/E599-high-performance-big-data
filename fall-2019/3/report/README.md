@@ -1,1 +1,1 @@
-Describe here who did what in the project or report.
+This project was done individually by Mariem Loukil (code and report) 
