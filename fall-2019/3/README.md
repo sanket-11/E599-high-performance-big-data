@@ -6,8 +6,7 @@ We trained three different networks on our specific dataset (IndyCar images data
 * SSD-Mobilenetv2 
 * Tiny Yolov3
 
-The SSD-Mobilenet networks were implemented using [Tensorflow model Zoo ]
-(https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) and the Tiny Yolov3 was implemented in Tensorflow with the data in the VOC format.
+The SSD-Mobilenet networks were implemented using [Tensorflow model Zoo ](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) and the Tiny Yolov3 was implemented in Tensorflow with the data in the VOC format.
 
 In the folder, code/output_data, there are example of the cars detection using the models we implemented.
 
