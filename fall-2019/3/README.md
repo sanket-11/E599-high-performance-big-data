@@ -17,3 +17,16 @@ The Table below shows the mAP results for the 3 models:
 | | SSD-Mobilenetv1  | SSD-Mobilenetv2 | Tiny-yolov3|
 | ------------- | ------------- |------------- |------------- |
 | mAP | 72.44% | 64.27%|78.04% |
+
+
+Models CPU Perforamnce: 
+| | SSD-Mobilenetv1  | SSD-Mobilenetv2 | Tiny-yolov3|
+| ------------- | ------------- |------------- |------------- |
+| Average detection time (seconds) | 1.488| 1.431|0.934|
+| Frames per second (FPS)  | 0.762 |0.698 |1.07|
+
+Models GPU Perforamnce: 
+| | SSD-Mobilenetv1  | SSD-Mobilenetv2 | Tiny-yolov3|
+| ------------- | ------------- |------------- |------------- |
+| Average detection time (seconds) | 0.101 | 0.104 |0.0739|
+| Frames per second (FPS)  | 9.870 | 9.626 |13.538|
