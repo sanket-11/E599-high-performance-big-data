@@ -26,7 +26,9 @@ For the dataset, we were provided with around 2000 labelled images of IndyCar ra
  - We use this to our advantage where we cluster the embeddings of crashed cars and normal cars.
  - The K-Means clustering performs well on the embeddings and clearly forms separate clusters for the two classes, which is further used for classification.
  - Individual images can be used to classify using the YOLO and Siamese in conjugation, however we are still working to integrate siamese with YOLO to do classification on live streams
+ 
 ![Siamese Netowork](https://sites.google.com/site/quartetnetlearning/_/rsrc/1467097642046/home/siamese.jpg?height=255)
+
 ##### Siamese Network Output(Single Margin):
 ![singlemargin](https://lh3.googleusercontent.com/Pgh3NOqv19pPJpt16RCus7tmFATWAx4vLFiVFw_9dkUlGbmQbpRXWApbZVrBHs90RJ_dsawuG9g1LFrUPjoucWK1qhUG-Tp1qlEIb-Lg55ucLJh45jAJRErOf-4p2ztmHq7GO3Lonv7IQLm20aOvZA1_q9zS1pj8-E8B1bP_neDcQkNWaqdSggTtmpprMn7FiXJUbld-pKYcyLnpnDrWUHjx4Pr2WOW5lhepb6Nwb0Z_U5vU-FG5Fb_FeWyCO3Qz2E1HDwizBHjpilq4BwI4pl6JQzk_5SKaWUhU0zbnDU4B-0zgiFwLdFKMxtuDD9aZRAX4h9VVPjyLjQdsEdXPJj8wk8g9_uJrSNCOk8EqtNLZU-7q78kpfAxcfsQPxG1cbpNIFya08eYdf7XS734tgfGvBCe4J5WUgxzY75d_8oVR1VxzrVYvSvArY7BLr_3NUY_QT595AJfO9IKW9jnXYS_8MUaMuwDH8Uq-bZeZLRmFGvhXjP8w_scBOHY4nBXBLX8QBH0XH7hUGtVfHBJf4l-axVU8IPOwVYCMOQPSGc0d5FlPFkGFs2qAZ45ApTb6tg9tkzs4SHNq_yylZNTBBkjQco-xcSSTyHvPH7LEiMh5xGZsUuv83a18S6U1oHBZjPEUenadWIfkApamfggLMOMy6NAcZ-VNvdgZVBbvziUf34bg=w660-h336-no)
 ##### Siamese Network Output(Double Margin):
