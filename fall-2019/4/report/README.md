@@ -1,5 +1,3 @@
-Describe here who did what in the project or report.
-
 # Contributions
 
 | Team Member | Task | Contribution |
