@@ -43,7 +43,7 @@ For the dataset, we were provided with around 2000 labelled images of IndyCar ra
  -	Amongst our experiments, we realized that the ideal architecture to predict crash should involve recurrence, such as a RNN.
  -	With recurrence we can use data from multiple frames of the live stream and then make meticulous predictions, since a recurrent network will use data along a time-line to increase the accuracy of the prediction. Such as multiple frames of a crash one-after the other.
 
-## REFERENCES
+## References
 
 [1]	Miller, A. (2015, March 12). The 8 Deadliest Race Tracks In The World.  https://www.thrillist.com/cars/the-8-deadliest-tracks-on-earth-most-dangerous-races.
 
@@ -54,6 +54,3 @@ For the dataset, we were provided with around 2000 labelled images of IndyCar ra
 [4]	Hadsell, R., Chopra, S., & Lecun, Y. (n.d.). Dimensionality Reduction by Learning an Invariant Mapping. 2006 IEEE Computer Society Conference on Computer Vision and Pattern Recognition - Volume 2 (CVPR06). 
 
 [5]	Hao, J., Dong, J., Wang, W., & Tan, T. (2018). DeepFirearm: Learning Discriminative Feature Representation for Fine-grained Firearm Retrieval. 2018 24th International Conference on Pattern Recognition (ICPR). 
-
-
-
