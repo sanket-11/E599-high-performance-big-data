@@ -17,7 +17,7 @@ For the dataset, we were provided with around 2000 labelled images of IndyCar ra
  ##### YOLO Stage 1 Output :
 ![yolostage1](https://raw.githubusercontent.com/ManjeetKP/E599-high-performance-big-data/master/fall-2019/4/code/output_data/stage11.png)
  ##### YOLO Stage 2 Output :
-![yolostage2](https://lh3.googleusercontent.com/ttjCuclSdtiGuNqPQAhgDJ4s1WT17cMPAfNiqnuUKMy1iAGN0qYH-lB8p1zZAwe7qlaqfUQPg7h9F9f_AbBN08qJ_m85zUbOSFMAarsbaBCGiWNSs3M2UZqdKEHWUrzbShTbdAdR_sKuvu9EK5jH9zdQ9ir7EsQQZThd-exoknMLq0x5MJVnn38rNurRKrSu_ISGSM_H_7kRPzpWYGFAltMeTyoqmdsqVrG-GtUvNa0nQ287TRi_2ntlmakbU2njnk5NBlhBeaSAiVWaxqrDemcCpr-t_gch__De2SSum1UQZiUpKjYQ2btSzeYFw9RywOknzxOMH11Ktw1APNPbmnGLXkSBA0Ml6oRglDuq7b1l9qz222U0pNnYKEmXe9if8bblZKf9OQdMguQO81gMBx9rFC5RvH7tWuq9T94FlcyKLsh14_HpE3ACS2v9EF0IKYoAYDeui3hxpKa6luXNAMMmF43a2ZXSvATfvaQrd0VtyzHQv05vI-BOChrwLrO9Wi5DW8aMbrnn48AgOpnvyMHK3X0lQuVHk00wdCM8hoAhY9E4AUzOBcPPWoLqExxSDWPNB0Oe45pN5SrqZdx5hLmJVdswt0rOdUjPSDoYliQL64jCeBYhvm1c406ipy2dbNLaK69qa6Q1jNRXUy9eEcio7tQKBQmu3FgJrIbI0CHGTMji=w1152-h648-no)
+![yolostage2](https://i.imgur.com/3iebLRz.png)
 ##### YOLO Stage 3 Output :
 ![yolostage3](https://raw.githubusercontent.com/ManjeetKP/E599-high-performance-big-data/master/fall-2019/4/code/output_data/stage22.png)
 #### Siamese Network
@@ -30,9 +30,9 @@ For the dataset, we were provided with around 2000 labelled images of IndyCar ra
 ![Siamese Netowork](https://sites.google.com/site/quartetnetlearning/_/rsrc/1467097642046/home/siamese.jpg?height=255)
 
 ##### Siamese Network Output(Single Margin):
-![singlemargin](https://lh3.googleusercontent.com/Pgh3NOqv19pPJpt16RCus7tmFATWAx4vLFiVFw_9dkUlGbmQbpRXWApbZVrBHs90RJ_dsawuG9g1LFrUPjoucWK1qhUG-Tp1qlEIb-Lg55ucLJh45jAJRErOf-4p2ztmHq7GO3Lonv7IQLm20aOvZA1_q9zS1pj8-E8B1bP_neDcQkNWaqdSggTtmpprMn7FiXJUbld-pKYcyLnpnDrWUHjx4Pr2WOW5lhepb6Nwb0Z_U5vU-FG5Fb_FeWyCO3Qz2E1HDwizBHjpilq4BwI4pl6JQzk_5SKaWUhU0zbnDU4B-0zgiFwLdFKMxtuDD9aZRAX4h9VVPjyLjQdsEdXPJj8wk8g9_uJrSNCOk8EqtNLZU-7q78kpfAxcfsQPxG1cbpNIFya08eYdf7XS734tgfGvBCe4J5WUgxzY75d_8oVR1VxzrVYvSvArY7BLr_3NUY_QT595AJfO9IKW9jnXYS_8MUaMuwDH8Uq-bZeZLRmFGvhXjP8w_scBOHY4nBXBLX8QBH0XH7hUGtVfHBJf4l-axVU8IPOwVYCMOQPSGc0d5FlPFkGFs2qAZ45ApTb6tg9tkzs4SHNq_yylZNTBBkjQco-xcSSTyHvPH7LEiMh5xGZsUuv83a18S6U1oHBZjPEUenadWIfkApamfggLMOMy6NAcZ-VNvdgZVBbvziUf34bg=w660-h336-no)
+![singlemargin](https://i.imgur.com/xftfvrI.png)
 ##### Siamese Network Output(Double Margin):
-![doublemargin](https://lh3.googleusercontent.com/Mat2y7pSZtfgNbGWpUl93Lq25cq9WB1OgURefVll5y3RCu526CmCzqhh13dYJxSGsxvT063C5C0jMfhfyzm7jV-frXeVQzhFcxvxvGxB7oCxG97qCotxYGVQqcTe5I5mUQReS2tgmvAH6MI6zHx0cj7yZ-Vcg2GM-T7NdSxijAHHNzQwB5a1ej_gxfDyJd84rmV7UCvuZpV_-KA_U9ViHt4J9-PX7uDCbS4DC4KZZfDti--VMSCUsVaYZo5uQ2YQQTelc3ChZZCEH1mj_IJbN9Jps1Drh4OK2kSDVkSwP2r_p0zW1THUueXEEzbvMp87D890R5rZC6TnnkhxM92v8GKxXDtQkrxPX-sv8_QJEqXpqs-ePn1-avaO6vxmVxleOtNAkk7E-4CQz2StTAabrnhPufXrzC2faItl7T3kb5N02fZEBtzncfej3yrwAIYePTRM8LsAXNKOd5tmEqVYmFZ86L6DWhMSbREzyXpx_rmAyZ6QD2TjziDnpaCL4INiFSRXb5PD7EFB0SsHu8bVGtp35BOSfU0DuDqNXQw8Y3Xq4coWzzYknPs_r5C-4blbip2by-YrnXXUK3JDvCzwn8dMxvBkvpcadptB8oMVbLuRZKsUU6mCWPIjPQjAGTlNH4MEY8xq7SSJ1EL89afINtRb-597j46YMgItauTH5OaI632v=w836-h539-no)
+![doublemargin](https://i.imgur.com/44tOpvp.png)
 ## Conclusion:
  -	YOLO performs well in detecting cars in general, irrespective of its condition.
  -	When trained to differentiate and predict Crash and normal car, it gets confused and sometimes detects a crashed car as a normal car.
