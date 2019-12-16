@@ -7,8 +7,6 @@ $ pip install opencv-python
 $ pip install easydict
 $ sudo apt-get install openjdk-8-jdk
 $ sudo apt-get install maven
-
-
 ```
 
 ### Flask server
@@ -20,8 +18,14 @@ cd red5-server
 ./red5.sh &
 ```
 
-### To run pre trained model
+### To run pre trained model on a live feed or a video
 
 ```sh
 $ python run_flask_server.py
+```
+
+### Obtain car embeddings 
+
+```sh
+Once you run the model and obtain the bounding boxes, pass the output images from YOLO to the siamese network to obtain embeddings using CarEmbedding.ipynb
 ```
